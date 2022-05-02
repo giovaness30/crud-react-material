@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export default axios.create({
-  baseURL: `http://localhost:3000/`,
+  baseURL: `https://my-json-server.typicode.com/giovaness30/myjsonserver/`,
   headers: {
     'Content-Type': 'application/json'
   }
