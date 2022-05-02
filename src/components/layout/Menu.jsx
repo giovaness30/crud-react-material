@@ -13,6 +13,9 @@ const Menu = props => (
         <li>
           <Link to="/products">Produtos</Link>
         </li>
+        <li>
+          <Link to="/search">Pesquisar</Link>
+        </li>
       </ul>
     </nav>
   </aside>
