@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import API from '../api/api.js'
+import './AddProduct.css'
 
 import { Button, Stack } from '@mui/material'
 import CurrencyFormat from 'react-currency-format'
@@ -41,22 +42,17 @@ const AddProduct = props => {
       .then(response => {
         console.log(response)
         if (response.statusText === 'Created') {
-          // setSnackSuccess(true)
           clearInputs()
-
-          // dispatch(setRefresh(true))
-        } else {
-          setSnackError(true)
         }
       })
       .catch(error => {
-        setSnackError(true)
         console.log(error)
       })
   }
 
   return (
-    <div>
+    <div className="addProduct">
+      <h3>Incluir Produto</h3>
       <form autoComplete="off" onSubmit={handleSubmit}>
         <TextField
           required
@@ -89,7 +85,7 @@ const AddProduct = props => {
           spacing={3}
         >
           <Button variant="contained" type="submit" endIcon={<SendIcon />}>
-            Adicionar
+            Incluir
           </Button>
         </Stack>
       </form>

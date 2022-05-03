@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import CurrencyFormat from 'react-currency-format'
 
 import {
   DataGrid,
@@ -104,16 +105,23 @@ const Products = () => {
 
   // FUNCAO PRINCIPAL ONDE FAZ A LISTAGEM DOS DADOS
   useEffect(() => {
-    API.get(`/products`).then(res =>
-      setProducts(
-        res.data.map(product => ({
-          id: product.id,
-          name: product.name,
-          description: product.description,
-          price: product.price
-        }))
+    API.get(`/products`)
+      .then(res =>
+        setProducts(
+          res.data.map(product => ({
+            id: product.id,
+            name: product.name,
+            description: product.description,
+            price: product.price
+          }))
+        )
       )
-    )
+      .catch(e =>
+        alert(
+          'Erro backend - execute-o com o comando = yarn run json:server. ->' +
+            e
+        )
+      )
   }, [refresh])
 
   const [searchText, setSearchText] = useState('')
@@ -172,9 +180,16 @@ const Products = () => {
   // DELETE ITENS
   const deletItem = useCallback(
     params => () => {
-      API.delete(`/products/${params.row.id}`).then(res => {
-        dispatch(increment())
-      })
+      API.delete(`/products/${params.row.id}`)
+        .then(res => {
+          dispatch(increment())
+        })
+        .catch(e =>
+          alert(
+            'Erro backend - execute-o com o comando = yarn run json:server. ->' +
+              e
+          )
+        )
     },
     []
   )
@@ -197,10 +212,17 @@ const Products = () => {
       description: inputs.description,
       price: inputs.price
     }
-    API.put(`/products/${prodEdit}`, data).then(res => {
-      dispatch(decrement())
-      handleClose()
-    })
+    API.put(`/products/${prodEdit}`, data)
+      .then(res => {
+        dispatch(decrement())
+        handleClose()
+      })
+      .catch(e =>
+        alert(
+          'Erro backend - execute-o com o comando = yarn run json:server. ->' +
+            e
+        )
+      )
   })
 
   const style = {
@@ -245,6 +267,7 @@ const Products = () => {
           }}
         />
       </div>
+      {/* MODAL DE EDICAO PRODUTO */}
       <Modal
         open={openEdit}
         onClose={handleClose}
@@ -272,8 +295,11 @@ const Products = () => {
               />
             </Grid>
             <Grid item>
-              <TextField
-                id="price"
+              <CurrencyFormat
+                customInput={TextField}
+                thousandSeparator
+                prefix="R$"
+                decimalScale={2}
                 label="Preço"
                 value={inputs.price}
                 onChange={e => setInputs({ ...inputs, price: e.target.value })}

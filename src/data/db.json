@@ -1,40 +1,64 @@
 {
   "products": [
-      {
-        "id": 1,
-        "name": "Hambúrguer",
-        "description": "Pão, bife de hambúrguer 90g, salada e batata.",
-        "price": "R$1,050"
-      },
-      {
-        "id": 2,
-        "name": "X-Búrguer",
-        "description": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, salada e batata.",
-        "price": "R$1,050"
-      },
-      {
-        "id": 3,
-        "name": "X-Bacon",
-        "description": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
-        "price": "R$1,050"
-      },
-      {
-        "id": 4,
-        "name": "X-Tudo",
-        "description": "Pão, 2 bifes de hambúrguer 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
-        "price": "R$1,050"
-      },
-      {
-        "id": 5,
-        "name": "Coca cola 350ml",
-        "description": "",
-        "price": "R$1,050"
-      },
-      {
-        "id": 6,
-        "name": "Coca cola 600ml",
-        "description": "",
-        "price": "R$1,050"
-      }
+    {
+      "name": "Hambúrguer",
+      "description": "Pão, bife de hambúrguer 90g, salada e batata.",
+      "price": "R$105",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "X-Búrguer",
+      "description": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, salada e batata.",
+      "price": "R$1,050"
+    },
+    {
+      "id": 3,
+      "name": "X-Bacon",
+      "description": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
+      "price": "R$1,050"
+    },
+    {
+      "id": 4,
+      "name": "X-Tudo",
+      "description": "Pão, 2 bifes de hambúrguer 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
+      "price": "R$1,050"
+    },
+    {
+      "id": 5,
+      "name": "Coca cola 350ml",
+      "description": "",
+      "price": "R$1,050"
+    },
+    {
+      "id": 6,
+      "name": "Coca cola 600ml",
+      "description": "",
+      "price": "R$1,050"
+    },
+    {
+      "name": "X-Calabresa",
+      "description": "Pão calabresa + queijo",
+      "price": "15",
+      "id": 7
+    },
+    {
+      "name": "X-Frango",
+      "description": "pao, frango",
+      "price": "R$17",
+      "id": 8
+    },
+    {
+      "name": "Pepsi",
+      "description": "Refrigerante",
+      "price": "R$15",
+      "id": 9
+    },
+    {
+      "name": "Misto",
+      "description": "pao",
+      "price": "R$11",
+      "id": 12
+    }
   ]
 }

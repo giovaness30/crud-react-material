@@ -21,15 +21,23 @@ const Search = () => {
   function getSearch() {
     API.get(
       `/products?${optionSelect === 'name' ? 'q' : optionSelect}=${valueSearch}`
-    ).then(response =>
-      setResultSearch(
-        response.data.map(item => (
-          <div>
-            {item.id} - {item.name} - {item.description}
-          </div>
-        ))
-      )
     )
+      .then(response => {
+        setResultSearch(
+          response.data.map(item => (
+            <div>
+              <li key={item.id}>
+                {item.id} - {item.name} - {item.description} - {item.price}
+              </li>
+            </div>
+          ))
+        )
+      })
+      .catch(e =>
+        alert(
+          'Erro backend - execute-o com o comando = yarn run json:server' + e
+        )
+      )
   }
 
   return (
@@ -55,7 +63,7 @@ const Search = () => {
         onChange={e => setValueSearch(e.target.value)}
       ></TextField>
       <Button onClick={getSearch}>Pesquisar</Button>
-      <h2>{resultSearch}</h2>
+      {resultSearch}
     </div>
   )
 }
