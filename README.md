@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `1 - yarn . create all dependency's`
+### `1 - yarn to create all dependency's`
 
 ### `2 - yarn run json-server`
 
