@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `1 - 'yarn' to create all dependency's`
 
-### `2 - 'yarn run json-server' execute backend server`
+### `2 - 'yarn run json:server' execute backend server`
 
 ### `3 - 'yarn start' start project`
 
