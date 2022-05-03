@@ -6,9 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `1 - yarn run json-server`
+### `1 - yarn . create all dependency's`
 
-### `2 - yarn start`
+### `2 - yarn run json-server`
+
+### `3 - yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
